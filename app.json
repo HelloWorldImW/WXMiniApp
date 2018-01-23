@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/aboutUs/aboutUs",
+    "pages/curriculum/curriculum",
+    "pages/news/news",
+    "pages/subscribe/subscribe"
+  ],
+  
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1b82fb",
+    "navigationBarTitleText": "南通潜能教育培训",
+    "navigationBarTextStyle": "white"
+  },
+
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/aboutUs/aboutUs",
+        "text": "关于我们"
+      },
+      {
+        "pagePath": "pages/curriculum/curriculum",
+        "text": "课程"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "咨询"
+      },
+      {
+        "pagePath": "pages/subscribe/subscribe",
+        "text": "预约"
+      }]
+  }
+}

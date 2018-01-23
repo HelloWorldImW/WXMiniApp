@@ -1,0 +1,7 @@
+<!--pages/aboutUs/aboutUs.wxml-->
+
+<scroll-view scroll-x="true" style="white-space: nowrap; display: flex">
+    <view style="background: red; width: {{scrollWidth}}px; height: 100px; display: inline-block" ></view>
+  <view style="background: blue; width: {{scrollWidth}}px; height: 100px; display: inline-block"></view>
+  <view style="background: yellow; width: {{scrollWidth}}px; height: 100px; display: inline-block"></view>
+</scroll-view>

@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.1",
 	"appid": "wx430ae657b50cfef3",
-	"projectname": "WXDemo",
+	"projectname": "WXTestDemo",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
