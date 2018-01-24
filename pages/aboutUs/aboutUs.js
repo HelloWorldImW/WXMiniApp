@@ -1,42 +1,27 @@
 // pages/aboutUs/aboutUs.js
-var app = getApp()
-
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    width: app.globalData.windowWidth,
+    // 顶部滚动栏
     imgUrls: [
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
+      { imgUrl: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',imageKey:"key1"},
+      { imgUrl: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',imageKey: "key2"}
     ],
-    indicatorDots: false,
-    autoplay: false,
-    interval: 5000,
-    duration: 1000
+    imageWidth: wx.getSystemInfoSync().windowWidth,
+    indicatorDots: true,
+    autoplay: true,
+    interval: 2000,
+    duration: 1000,
+    // 地图栏
+    mapLabel: {
+      leftIcon:"success",
+      title: "我爱北京天安门东大街西边",
+      rightIcon: "success",
+    } 
   },
-  changeIndicatorDots: function (e) {
-    this.setData({
-      indicatorDots: !this.data.indicatorDots
-    })
-  },
-  changeAutoplay: function (e) {
-    this.setData({
-      autoplay: !this.data.autoplay
-    })
-  },
-  intervalChange: function (e) {
-    this.setData({
-      interval: e.detail.value
-    })
-  },
-  durationChange: function (e) {
-    this.setData({
-      duration: e.detail.value
-    })
-  },
+  
   /**
    * 生命周期函数--监听页面加载
    */
