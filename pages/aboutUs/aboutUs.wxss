@@ -1,1 +1,33 @@
 /* pages/aboutUs/aboutUs.wxss */
+
+/*标题模板  */
+.titleLabel {
+  display: flex;
+  margin-top: 5px;
+  flex-direction: row;
+  justify-content: space-between; 
+}
+.titleLabel_leftIcon {
+  width: 25px;
+  height: 25px;
+  background-color: blue
+}
+
+.titleLabel_rightIcon {
+  width: 25px;
+  height: 25px;
+}
+
+.titleLabel_title {
+  width: 100%;
+  font-size:17px;
+  color: gray;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/*课程模板  */
+
+/*师资模板  */
+
+/*课程模板  */

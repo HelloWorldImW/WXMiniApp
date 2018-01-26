@@ -2,12 +2,19 @@
 
 <!--通用标题栏  -->
 <template name="titleLable">
-  <view>
-    <icon type="{{leftIcon}}" size="40"/>
-    <text >{{title}}</text>
-    <icon type="{{rightIcon}}" size="40"/>  
+  <view class='titleLabel' bindtap='clickMap'>
+    <image class='titleLabel_leftIcon' src="/resource/location.png"></image>
+    <text class='titleLabel_title'>{{title}}</text>
+    <image class='titleLabel_rightIcon' src="/resource/gotoNext.png"></image>
   </view>
 </template>
+<!--课程模板  -->
+
+<!--师资模板  -->
+
+<!--课程模板  -->
+
+
 
 <!--顶部滚动栏  -->
 <swiper indicator-dots="{{indicatorDots}}"
