@@ -7,8 +7,9 @@ Page({
     // 顶部滚动栏
     imgUrls: [
       { imgUrl: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',imageKey:"key1"},
-      { imgUrl: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',imageKey: "key2"}
+      { imgUrl: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',imageKey:"key2"}
     ],
+    windowHeight: wx.getSystemInfoSync().windowHeight,
     imageWidth: wx.getSystemInfoSync().windowWidth,
     indicatorDots: true,
     autoplay: true,
@@ -62,8 +63,16 @@ Page({
     } else if (e.currentTarget.id == "3") {
       console.log("3")
     }
-
   },
+
+  // 点击滚动图片
+  clickImage: function(e) {
+    var imageUrl = this.data.imgUrls[e.currentTarget.dataset.index].imgUrl
+    console.log(imageUrl)
+  },
+
+
+
   /**
    * 生命周期函数--监听页面加载
    */

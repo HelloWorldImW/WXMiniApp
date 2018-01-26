@@ -1,30 +1,34 @@
 <!--pages/aboutUs/aboutUs.wxml-->
 <import src="/pages/common/common.wxml"/>
+<scroll-view scroll-y enable-back-to-top="true" style="height: {{windowHeight}}px;">
+  <!--顶部滚动栏  -->
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key= "imgKey">
+      <swiper-item>
+        <view data-index="{{index}}" catchtap='clickImage'>
+          <image src="{{item.imgUrl}}" model="aspectFit" style= "width: {{imageWidth}}px;"/>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
 
-<!--顶部滚动栏  -->
-<swiper indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-  <block wx:for="{{imgUrls}}" wx:key= "imgKey">
-    <swiper-item>
-      <image src="{{item.imgUrl}}" model="aspectFit" style= "width: {{imageWidth}}px;"/>
-    </swiper-item>
-  </block>
-</swiper>
+  <!--地图显示栏  -->
+  <template is="titleView" data="{{...mapLabel}}" />
 
-<!--地图显示栏  -->
-<template is="titleView" data="{{...mapLabel}}" />
+  <!--学校、课程、学员风采  -->
+  <view style='display:flex;justify-content:space-around;margin-top: 15px;'>
+    <template is="moduleView" data="{{...school}}" />
+    <template is="moduleView" data="{{...school1}}" />
+    <template is="moduleView" data="{{...school2}}" />
+  </view>
 
-<!--学校、课程、学员风采  -->
-<view style='display:flex;justify-content:space-around;margin-top: 15px;'>
-  <template is="moduleView" data="{{...school}}" />
-  <template is="moduleView" data="{{...school1}}" />
-  <template is="moduleView" data="{{...school2}}" />
-</view>
+  <!--最新公告  -->
 
-<!--最新公告  -->
+  <!--推荐课程  -->
 
-<!--推荐课程  -->
+  <!--师资力量  -->
 
-<!--师资力量  -->
+  <!--学员风采  -->
 
-<!--学员风采  -->
+</scroll-view>
