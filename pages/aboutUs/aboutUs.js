@@ -16,13 +16,30 @@ Page({
     duration: 1000,
     // 地图栏
     mapLabel: {
-      leftIcon:"success",
+      id:"map",
+      leftIcon:"/resource/location.png",
       title: "我爱北京天安门东大街西边",
-      rightIcon: "success",
-    } 
+      rightIcon:"/resource/gotoNext.png",
+    },
+    school: {
+      id: "1",
+      title: "学校",
+      icon: "/resource/location.png"
+    },
+    school1: {
+      id: "2",
+      title: "学校1",
+      icon: "/resource/location.png"
+    },
+    school2: {
+      id: "3",
+      title: "学校2",
+      icon: "/resource/location.png"
+    }
   },
   
-  clickMap: function () {
+  // 点击标题
+  clickTitle: function () {
     wx.getLocation({
       type: 'gcj02',
       success: function (res) {
@@ -36,7 +53,17 @@ Page({
       }
     })
   },
+  // 点击模板
+  clickModuleView: function (e) {
+    if (e.currentTarget.id == "1") {
+      console.log("1")
+    } else if (e.currentTarget.id == "2") {
+      console.log("2")
+    } else if (e.currentTarget.id == "3") {
+      console.log("3")
+    }
 
+  },
   /**
    * 生命周期函数--监听页面加载
    */

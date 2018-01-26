@@ -3,16 +3,15 @@
     "pages/aboutUs/aboutUs",
     "pages/curriculum/curriculum",
     "pages/news/news",
-    "pages/subscribe/subscribe"
+    "pages/subscribe/subscribe",
+    "pages/common/common"
   ],
-  
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#1b82fb",
     "navigationBarTitleText": "Test",
     "navigationBarTextStyle": "white"
   },
-
   "tabBar": {
     "list": [
       {
@@ -28,8 +27,9 @@
         "text": "咨询"
       },
       {
-        "pagePath": "pages/subscribe/subscribe",
+        "pagePath": "pages/common/common",
         "text": "预约"
-      }]
+      }
+    ]
   }
 }
