@@ -2,7 +2,7 @@
 
 <!--通用标题栏  -->
 <template name="titleView">
-  <view id="{{id}}" catchtap='clickTitle' style='display: flex;margin-top: 5px;flex-direction: row;justify-content: space-between;'>
+  <view id="{{id}}" catchtap='clickTitle' style='display: flex;flex-direction: row;justify-content: space-between;align-items: center;background-color:white;height:40px'>
     <image src="{{leftIcon}}" style='width: 25px;height: 25px;'></image>
     <text style='width: 100%;font-size:18px;color: gray;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;'>{{title}}</text>
     <image src="{{rightIcon}}" style='width: 25px;height: 25px;'></image>
@@ -11,8 +11,8 @@
 
 <!--板块模板  -->
 <template name="moduleView">
-  <view id="{{id}}" style='display:flex;flex-direction:column;align-items:center;width: 60px;height: 60px;' catchtap='clickModuleView'>
-    <image src='{{icon}}' style='width: 40px;height: 40px;'></image>
+  <view id="{{id}}" style='display:flex; flex-direction:column;align-items:center; width:70px;height:70px;' catchtap='clickModuleView'>
+    <image src='{{icon}}' style='width: 35px;height: 35px;margin-top:10px;'></image>
     <text style='font-size:15px'>{{title}}</text>
   </view>
 </template>

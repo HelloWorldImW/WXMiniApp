@@ -17,7 +17,7 @@
   <template is="titleView" data="{{...mapLabel}}" />
 
   <!--学校、课程、学员风采  -->
-  <view style='display:flex;justify-content:space-around;margin-top: 15px;'>
+  <view style='display:flex;justify-content:space-around;background-color:white;'>
     <template is="moduleView" data="{{...school}}" />
     <template is="moduleView" data="{{...school1}}" />
     <template is="moduleView" data="{{...school2}}" />
