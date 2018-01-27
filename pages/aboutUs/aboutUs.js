@@ -21,6 +21,7 @@ Page({
       leftIcon:"/resource/location.png",
       title: "我爱北京天安门东大街西边",
       rightIcon:"/resource/gotoNext.png",
+      moreText: "",
     },
     school: {
       id: "1",
@@ -36,6 +37,17 @@ Page({
       id: "3",
       title: "学校2",
       icon: "/resource/location.png"
+    },
+    news: {
+      icon:"/resource/location.png",
+      title:"Hello World"
+    },
+    recommonLession: {
+      id: "recommonSession",
+      leftIcon: "/resource/location.png",
+      title: "推荐课程",
+      rightIcon: "/resource/gotoNext.png",
+      moreText: "更多",
     }
   },
   
@@ -70,7 +82,10 @@ Page({
     var imageUrl = this.data.imgUrls[e.currentTarget.dataset.index].imgUrl
     console.log(imageUrl)
   },
-
+  // 点击最新公告
+  clickNews: function(e) {
+    console.log("点击最新公告")
+  },
 
 
   /**

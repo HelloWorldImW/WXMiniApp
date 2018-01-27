@@ -24,9 +24,15 @@
   </view>
 
   <!--最新公告  -->
-
+<view class='news' catchtap='clickNews'>
+  <image src='{{news.icon}}' class='news-image'></image>
+  <view class='vertical-line'></view>
+  <text class='news-title'>{{news.title}}</text>
+</view>
   <!--推荐课程  -->
-
+<view style='margin-bottom:2px'>
+  <template is="titleView" data="{{...recommonLession}}" />
+</view>
   <!--师资力量  -->
 
   <!--学员风采  -->

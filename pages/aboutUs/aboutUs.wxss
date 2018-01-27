@@ -2,3 +2,37 @@
 page {
   background-color: whitesmoke;
 }
+
+/*最新公告  */
+.news {
+  display: flex;
+  background-color: white;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+
+/*公告图片  */
+.news-image {
+  width:80px;
+  height:60px;
+}
+
+/*竖线 */
+.vertical-line {
+  background-color: gray;
+  width: 1px;
+  height: 40px;
+}
+
+/*公告标题  */
+.news-title {
+  margin-left:10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width:100%;
+  padding-right:10px;
+}

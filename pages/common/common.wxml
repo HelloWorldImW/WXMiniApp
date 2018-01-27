@@ -5,6 +5,7 @@
   <view id="{{id}}" catchtap='clickTitle' style='display: flex;flex-direction: row;justify-content: space-between;align-items: center;background-color:white;height:40px'>
     <image src="{{leftIcon}}" style='width: 25px;height: 25px;'></image>
     <text style='width: 100%;font-size:18px;color: gray;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;'>{{title}}</text>
+    <text style='font-size:13px;width:35px;'>{{moreText}}</text>
     <image src="{{rightIcon}}" style='width: 25px;height: 25px;'></image>
   </view>
 </template>
