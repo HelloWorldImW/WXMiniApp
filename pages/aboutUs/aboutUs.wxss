@@ -36,3 +36,9 @@ page {
   width:100%;
   padding-right:10px;
 }
+/*学校 课程 学员风采  */
+.modulsView {
+  display:flex;
+  justify-content:space-around;
+  background-color:white;
+}

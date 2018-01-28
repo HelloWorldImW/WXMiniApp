@@ -4,17 +4,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // 顶部滚动栏
-    imgUrls: [
-      { imgUrl: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',imageKey:"key1"},
-      { imgUrl: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',imageKey:"key2"}
-    ],
     windowHeight: wx.getSystemInfoSync().windowHeight,
     imageWidth: wx.getSystemInfoSync().windowWidth,
-    indicatorDots: true,
-    autoplay: true,
-    interval: 2000,
-    duration: 1000,
+    topScroll: {
+      // 顶部滚动栏
+      imgUrls: [
+        { imgUrl: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg', imageKey: "key1" },
+        { imgUrl: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg', imageKey: "key2" }
+      ],
+      indicatorDots: true,
+      autoplay: true,
+      interval: 2000,
+      duration: 1000,
+    },
     // 地图栏
     mapLabel: {
       id:"map",
@@ -23,20 +25,22 @@ Page({
       rightIcon:"/resource/gotoNext.png",
       moreText: "",
     },
-    school: {
-      id: "1",
-      title: "学校",
-      icon: "/resource/location.png"
-    },
-    school1: {
-      id: "2",
-      title: "学校1",
-      icon: "/resource/location.png"
-    },
-    school2: {
-      id: "3",
-      title: "学校2",
-      icon: "/resource/location.png"
+    moduls:{
+      school: {
+        id: "1",
+        title: "学校",
+        icon: "/resource/location.png"
+      },
+      school1: {
+        id: "2",
+        title: "学校1",
+        icon: "/resource/location.png"
+      },
+      school2: {
+        id: "3",
+        title: "学校2",
+        icon: "/resource/location.png"
+      }, 
     },
     news: {
       icon:"/resource/location.png",
@@ -52,20 +56,16 @@ Page({
   },
   
   // 点击标题
-  clickTitle: function () {
-    wx.getLocation({
-      type: 'gcj02',
-      success: function (res) {
-        var latitude = res.latitude
-        var longitude = res.longitude
-        wx.openLocation({
-          latitude: latitude,
-          longitude: longitude,
-          scale: 28
-        })
-      }
-    })
+  clickTitle: function (e) {
+    if (e.currentTarget.id == "map") {
+      this.openMap()
+    } else if (e.currentTarget.id == "recommonSession") {
+      console.log("recommonSession")
+    } else if (e.currentTarget.id == "3") {
+      console.log("3")
+    }
   },
+
   // 点击模板
   clickModuleView: function (e) {
     if (e.currentTarget.id == "1") {
@@ -79,7 +79,7 @@ Page({
 
   // 点击滚动图片
   clickImage: function(e) {
-    var imageUrl = this.data.imgUrls[e.currentTarget.dataset.index].imgUrl
+    var imageUrl = this.data.topScroll.imgUrls[e.currentTarget.dataset.index].imgUrl
     console.log(imageUrl)
   },
   // 点击最新公告
@@ -141,5 +141,20 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  // 打开地图
+  openMap: function() {
+    wx.getLocation({
+      type: 'gcj02',
+      success: function (res) {
+        var latitude = res.latitude
+        var longitude = res.longitude
+        wx.openLocation({
+          latitude: latitude,
+          longitude: longitude,
+          scale: 28
+        })
+      }
+    })
   }
 })

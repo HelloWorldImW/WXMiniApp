@@ -2,9 +2,9 @@
 <import src="/pages/common/common.wxml"/>
 <scroll-view scroll-y enable-back-to-top="true" style="height: {{windowHeight}}px;">
   <!--顶部滚动栏  -->
-  <swiper indicator-dots="{{indicatorDots}}"
-    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}" wx:key= "imgKey">
+  <swiper indicator-dots="{{topScroll.indicatorDots}}"
+    autoplay="{{topScroll.autoplay}}" interval="{{topScroll.interval}}" duration="{{topScroll.duration}}">
+    <block wx:for="{{topScroll.imgUrls}}" wx:key= "imgKey">
       <swiper-item>
         <view data-index="{{index}}" catchtap='clickImage'>
           <image src="{{item.imgUrl}}" model="aspectFit" style= "width: {{imageWidth}}px;"/>
@@ -17,10 +17,10 @@
   <template is="titleView" data="{{...mapLabel}}" />
 
   <!--学校、课程、学员风采  -->
-  <view style='display:flex;justify-content:space-around;background-color:white;'>
-    <template is="moduleView" data="{{...school}}" />
-    <template is="moduleView" data="{{...school1}}" />
-    <template is="moduleView" data="{{...school2}}" />
+  <view class="modulsView">
+    <block wx:for="{{moduls}}" wx:key="key">
+      <template is="moduleView" data="{{...item}}" />
+    </block>
   </view>
 
   <!--最新公告  -->
