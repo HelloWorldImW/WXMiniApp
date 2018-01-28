@@ -18,10 +18,25 @@
   </view>
 </template>
 
-<!--推荐课程模板  recommendCurriculumView-->
+<!--推荐课程模板  -->
+<template name="recommendCurriculumView">
+  <view id="{{id}}" catchtap='clickRecommendCurriculumView'>
+    <image src='http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg' style='width:150px;height:75px'></image>
+  </view>
+</template>
+
+<!--师资模板  -->
+<template name="teachersView">
+  <view>
+  </view>
+</template>
 
 
-<!--师资模板  teachersView-->
+<!--课程模板  -->
+<template name="curriculumView">
+  <view>
+  </view>
+</template>
 
 
-<!--课程模板  curriculumView-->
+<template is="recommendCurriculumView" />

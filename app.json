@@ -9,7 +9,6 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#1b82fb",
-    "navigationBarTitleText": "Test",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
