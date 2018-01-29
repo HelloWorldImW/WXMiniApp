@@ -30,7 +30,12 @@
 
 <!--师资模板  -->
 <template name="teachersView">
-  <view id="{{id}}" catchtap='clickTeachersView'>
+  <view id="{{id}}" catchtap='clickTeachersView' style='margin-left:10px; display:flex;'>
+    <image src='{{userImage}}' style='width:100px;height:150px;margin-top:10px;margin-bottom:10px;'></image>
+    <view style='margin-left:10px;display:flex;flex-direction:column;justify-content:space-between;margin-top:12px;margin-bottom:12px;'>
+      <text style='font-size:16px;'>{{name}}</text>
+      <text style='font-size:14px; color:gray;'>{{title}}</text>
+    </view>
   </view>
 </template>
 
@@ -38,5 +43,6 @@
 <!--课程模板  -->
 <template name="curriculumView">
   <view>
+    
   </view>
 </template>

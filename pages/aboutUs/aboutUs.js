@@ -99,6 +99,30 @@ Page({
         moreText: "更多",
       },
       details: {
+        item1: {
+          id: "张山",
+          userImage:"http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
+          name: "张山",
+          title: "教授",
+        },
+        item2: {
+          id: "张大山",
+          userImage: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
+          name: "张大山",
+          title: "学者",
+        },
+        item3: {
+          id: "王小三",
+          userImage: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
+          name: "王小三",
+          title: "副教授",
+        },
+        item4: {
+          id: "李大山",
+          userImage: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
+          name: "李大山",
+          title: "专家",
+        },
       }
     }
   },

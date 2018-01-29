@@ -44,9 +44,11 @@
   <view style='margin-bottom:4px'>
     <template is="titleView" data="{{...teachers.title}}" />
   </view>
-  <view>
+  <view style='margin-bottom:10px;'>
     <block wx:for="{{teachers.details}}" wx:key="key">
+    <view style='margin-bottom:2px;background-color:white;'>
       <template is="teachersView" data="{{...item}}"/>
+    </view>
     </block>
   </view>
 
