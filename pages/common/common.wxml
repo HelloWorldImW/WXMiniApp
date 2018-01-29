@@ -20,8 +20,11 @@
 
 <!--推荐课程模板  -->
 <template name="recommendCurriculumView">
-  <view id="{{id}}" catchtap='clickRecommendCurriculumView'>
-    <image src='http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg' style='width:150px;height:75px'></image>
+  <view id="{{id}}" catchtap='clickRecommendCurriculumView' style='margin-top:5px;margin-bottom:5px;background-image:url("{{bgImage}}");display:flex;align-items:center;justify-content:center;width:{{width}}px;height:{{height}}px;'>
+     <view style='display:flex;flex-direction:column;align-items:center;justify-content:center;background-color:white;width:{{width-40}}px;height:{{height-40}}px;opacity:0.5;'>
+        <text style='font-size:15px'>{{title}}</text>
+        <view style='background-color: gray;width: {{width-40-20}}px;height:1px;'></view>
+     </view> 
   </view>
 </template>
 
@@ -37,6 +40,3 @@
   <view>
   </view>
 </template>
-
-
-<template is="recommendCurriculumView" />

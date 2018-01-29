@@ -30,11 +30,18 @@
   <text class='news-title'>{{news.title}}</text>
 </view>
   <!--推荐课程  -->
-<view style='margin-bottom:2px'>
-  <template is="titleView" data="{{...recommonLession}}" />
+<view style='margin-bottom:4px'>
+  <template is="titleView" data="{{...recommonLession.title}}" />
+</view>
+<view style='display:flex;justify-content: space-around;flex-wrap:wrap;background-color:white;'>
+  <block wx:for="{{recommonLession.details}}" wx:key="key">
+    <template is="recommendCurriculumView" data="{{...item}}"/>
+  </block>
 </view>
   <!--师资力量  -->
 
   <!--学员风采  -->
 
 </scroll-view>
+
+<button class='suspendButton' catchtap='clickSuspendButton'></button>

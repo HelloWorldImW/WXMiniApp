@@ -42,3 +42,14 @@ page {
   justify-content:space-around;
   background-color:white;
 }
+
+.suspendButton {
+  position: fixed; 
+  background-image:url("http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg");
+  z-index: 999;
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  bottom: 20px;
+  right: 20px;
+}

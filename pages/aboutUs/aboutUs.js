@@ -25,6 +25,7 @@ Page({
       rightIcon:"/resource/gotoNext.png",
       moreText: "",
     },
+    // 模板
     moduls:{
       school: {
         id: "1",
@@ -42,16 +43,69 @@ Page({
         icon: "/resource/location.png"
       }, 
     },
+    /// 最新公告
     news: {
       icon:"/resource/location.png",
       title:"Hello World"
     },
+    /// 推荐课程
     recommonLession: {
-      id: "recommonSession",
-      leftIcon: "/resource/location.png",
-      title: "推荐课程",
-      rightIcon: "/resource/gotoNext.png",
-      moreText: "更多",
+      title: {
+        id: "recommonSession",
+        leftIcon: "/resource/location.png",
+        title: "推荐课程",
+        rightIcon: "/resource/gotoNext.png",
+        moreText: "更多",
+      },
+      details: {
+        item1: {
+          id: "id1",
+          bgImage: "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg",
+          width: (wx.getSystemInfoSync().windowWidth-30)/2.0,
+          height: 100,
+          title: "数学",
+        },
+        item2: {
+          id: "id2",
+          bgImage: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
+          width: (wx.getSystemInfoSync().windowWidth - 30) / 2.0,
+          height: 100,
+          title: "地理",
+        },
+        item3: {
+          id: "id3",
+          bgImage: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
+          width: (wx.getSystemInfoSync().windowWidth - 30) / 2.0,
+          height: 100,
+          title: "自然",
+        },
+        item4: {
+          id: "id4",
+          bgImage: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
+          width: (wx.getSystemInfoSync().windowWidth - 30) / 2.0,
+          height: 100,
+          title: "语文",
+        }, 
+        item5: {
+          id: "id4",
+          bgImage: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
+          width: (wx.getSystemInfoSync().windowWidth - 30) / 2.0,
+          height: 100,
+          title: "语文",
+        }, item6: {
+          id: "id4",
+          bgImage: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
+          width: (wx.getSystemInfoSync().windowWidth - 30) / 2.0,
+          height: 100,
+          title: "语文",
+        }, item41: {
+          id: "id4",
+          bgImage: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
+          width: (wx.getSystemInfoSync().windowWidth - 30) / 2.0,
+          height: 100,
+          title: "语文",
+        },
+      }
     }
   },
   
@@ -82,12 +136,21 @@ Page({
     var imageUrl = this.data.topScroll.imgUrls[e.currentTarget.dataset.index].imgUrl
     console.log(imageUrl)
   },
+  
   // 点击最新公告
   clickNews: function(e) {
     console.log("点击最新公告")
   },
 
+  // 点击推荐课程详情
+  clickRecommendCurriculumView: function(e) {
+    console.log(e.currentTarget.id)
+  },
 
+  // 点击咨询按钮
+  clickSuspendButton: function(e) {
+    console.log("点击了咨询按钮")
+  },
   /**
    * 生命周期函数--监听页面加载
    */
