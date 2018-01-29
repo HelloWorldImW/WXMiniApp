@@ -86,25 +86,19 @@ Page({
           height: 100,
           title: "语文",
         }, 
-        item5: {
-          id: "id4",
-          bgImage: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
-          width: (wx.getSystemInfoSync().windowWidth - 30) / 2.0,
-          height: 100,
-          title: "语文",
-        }, item6: {
-          id: "id4",
-          bgImage: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
-          width: (wx.getSystemInfoSync().windowWidth - 30) / 2.0,
-          height: 100,
-          title: "语文",
-        }, item41: {
-          id: "id4",
-          bgImage: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
-          width: (wx.getSystemInfoSync().windowWidth - 30) / 2.0,
-          height: 100,
-          title: "语文",
-        },
+      }
+    },
+
+    /// 师资力量
+    teachers: {
+      title: {
+        id: "recommonSession",
+        leftIcon: "/resource/location.png",
+        title: "师资力量",
+        rightIcon: "/resource/gotoNext.png",
+        moreText: "更多",
+      },
+      details: {
       }
     }
   },
@@ -151,6 +145,14 @@ Page({
   clickSuspendButton: function(e) {
     console.log("点击了咨询按钮")
   },
+
+  //点击师资力量 
+  clickTeachersView: function(e) {
+    console.log(e.currentTarget.id)
+  },
+
+
+
   /**
    * 生命周期函数--监听页面加载
    */

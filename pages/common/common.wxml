@@ -30,7 +30,7 @@
 
 <!--师资模板  -->
 <template name="teachersView">
-  <view>
+  <view id="{{id}}" catchtap='clickTeachersView'>
   </view>
 </template>
 
