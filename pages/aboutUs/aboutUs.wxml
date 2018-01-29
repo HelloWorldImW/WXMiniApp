@@ -52,9 +52,18 @@
     </block>
   </view>
 
-
   <!--学员风采  -->
+  <view style='margin-bottom:4px'>
+    <template is="titleView" data="{{...studentShows.title}}" />
+  </view>
+  <block wx:for="{{studentShows.details}}" wx:key="key">
+    <view id="{{item.id}}" style='display:flex;padding-left:10px;padding-right:10px;padding-top:10px;background-color:white;' catchtap='clickStuendtShows'>
+    <image src='{{item.imageUrl}}' style='width:{{imageWidth}}px;height:160px'></image>
+    </view>
+  </block>
+
 
 </scroll-view>
 
+<!--咨询按钮  -->
 <button class='suspendButton' catchtap='clickSuspendButton'></button>

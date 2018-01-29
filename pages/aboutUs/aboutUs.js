@@ -124,6 +124,35 @@ Page({
           title: "专家",
         },
       }
+    },
+
+    /// 学员风采
+    studentShows: {
+      title: {
+        id: "recommonSession",
+        leftIcon: "/resource/location.png",
+        title: "学员风采",
+        rightIcon: "/resource/gotoNext.png",
+        moreText: "更多",
+      },
+      details: {
+        item1: {
+          id: "111",
+          imageUrl:"http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
+        },
+        item2: {
+          id: "222",
+          imageUrl: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
+        },
+        item3: {
+          id: "333",
+          imageUrl: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
+        },
+        item4: {
+          id: "444",
+          imageUrl: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
+        },
+      }
     }
   },
   
@@ -175,7 +204,10 @@ Page({
     console.log(e.currentTarget.id)
   },
 
-
+  // 点击学员风采
+  clickStuendtShows: function(e) {
+    console.log(e.currentTarget.id)
+  },
 
   /**
    * 生命周期函数--监听页面加载

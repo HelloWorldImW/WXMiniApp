@@ -39,10 +39,8 @@
   </view>
 </template>
 
-
 <!--课程模板  -->
 <template name="curriculumView">
   <view>
-    
   </view>
 </template>
