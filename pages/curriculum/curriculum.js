@@ -5,7 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
+    // 课程
+    curriculums: {
+      item1: {
 
+      },
+    }
   },
 
   /**

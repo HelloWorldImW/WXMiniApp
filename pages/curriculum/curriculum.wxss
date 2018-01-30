@@ -1,1 +1,8 @@
 /* pages/curriculum/curriculum.wxss */
+page {
+  background-color: whitesmoke;
+}
+
+.curriculumView {
+  
+}

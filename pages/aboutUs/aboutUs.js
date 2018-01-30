@@ -9,8 +9,8 @@ Page({
     topScroll: {
       // 顶部滚动栏
       imgUrls: [
-        { imgUrl: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg', imageKey: "key1" },
-        { imgUrl: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg', imageKey: "key2" }
+        { imgUrl: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'},
+        { imgUrl: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'}
       ],
       indicatorDots: true,
       autoplay: true,

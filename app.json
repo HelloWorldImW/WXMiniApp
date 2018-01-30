@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/aboutUs/aboutUs",
     "pages/curriculum/curriculum",
+    "pages/aboutUs/aboutUs",
     "pages/news/news",
     "pages/subscribe/subscribe",
     "pages/common/common"

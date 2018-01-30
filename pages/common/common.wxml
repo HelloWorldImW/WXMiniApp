@@ -41,6 +41,16 @@
 
 <!--课程模板  -->
 <template name="curriculumView">
-  <view>
+  <view style='background-color:white;'>
+    <!--上方展示栏  -->
+    <view>
+      <view style='background-color:purple;width:100px;height:100px;'>
+      </view> 
+    </view>
+
+    <!--标价栏  -->
+    <view>
+      <text>超感创作力训练</text>
+    </view>
   </view>
 </template>
