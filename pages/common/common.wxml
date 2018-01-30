@@ -41,16 +41,17 @@
 
 <!--课程模板  -->
 <template name="curriculumView">
-  <view style='background-color:white;'>
+  <view style='background-color:white;display:flex;flex-direction:column;align-items:flex-start;'>
     <!--上方展示栏  -->
-    <view>
-      <view style='background-color:purple;width:100px;height:100px;'>
+    <view style=''>
+      <view style='background-color:purple;width:100px;height:100px;margin-left:10px;margin-top:10px;'>
       </view> 
     </view>
 
     <!--标价栏  -->
-    <view>
-      <text>超感创作力训练</text>
+    <view style='margin-left:10px;margin-top:10px;width:375px;height:50px;display:flex;flex-direction:row;justify-content:space-between;'>
+      <text style='font-size:17px;'>超感创作力训练</text>
+      <text style='font-size:17px;'>￥5000</text>
     </view>
   </view>
 </template>
