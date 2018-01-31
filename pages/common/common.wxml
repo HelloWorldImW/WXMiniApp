@@ -41,10 +41,27 @@
 
 <!--课程模板  -->
 <template name="curriculumView">
-  <view style='background-color:white;display:flex;flex-direction:column;align-items:flex-start;'>
+  <view id="{{id}}" catchtap='clickCurriculumView' style='background-color:white;display:flex;flex-direction:column;align-items:flex-start;'>
     <!--上方展示栏  -->
-    <view style=''>
-      <view style='background-color:purple;width:100px;height:100px;margin-left:10px;margin-top:10px;'>
+    <view style='display:flex;align-items:center;'>
+      <!--左边方块  -->
+      <view style='background-color:purple;width:120px;height:100px;margin-left:10px;margin-top:10px;display:flex;flex-direction:column;justify-content:space-around;align-items:center;'>
+        <image src='/resource/location.png' style='width:20px;height:20px;'></image>
+        <text style='font-size:14px;color:white;'>超感创作力训练</text>
+        <text style='font-size:8px;color:white;'>开拓思维，让写作成为快乐</text>
+      </view> 
+      <!--右边条件  -->
+      <view style='background-color:whitesmoke;width:280px;height:80px;margin-top:10px;margin-left:-2px;display:flex;flex-direction:column;justify-content:center;'>
+        <!--适合年龄  -->
+        <view style='display:flex;margin-bottom:5px;'>
+          <text style='background-color:purple;color:white;font-size:8px;border-radius:4px;width:40px;text-align:center;margin-left:8px;'>适合年龄</text>
+          <text style='color:gray;font-size:8px;margin-left:5px;'>10-18周岁</text>
+        </view>
+        <!--训练课时  -->
+        <view style='display:flex;margin-top:5px;'>
+          <text style='background-color:purple;color:white;font-size:8px;border-radius:4px;width:40px;text-align:center;margin-left:8px;'>训练课时</text>
+          <text style='color:gray;font-size:8px;margin-left:5px;'>7天集中训练+50课时进阶训练(有效期一年)</text>
+        </view>
       </view> 
     </view>
 
