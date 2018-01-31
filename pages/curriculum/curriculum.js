@@ -8,7 +8,44 @@ Page({
     // 课程
     curriculums: {
       item1: {
-
+        id: "课程1",
+        iconUrl: "/resource/location.png",
+        title: "超感创作力训练",
+        content: "开拓思维，让写作成为快乐",
+        age: "10-18周岁",
+        time: "7天集中训练+50课时进阶训练(有效期一年)",
+        money: "5000",
+        itemWidth: wx.getSystemInfoSync().windowWidth,
+      },
+      item2: {
+        id: "课程2",
+        iconUrl: "/resource/location.png",
+        title: "超感创作力训练",
+        content: "开拓思维，让写作成为快乐",
+        age: "10-18周岁",
+        time: "7天集中训练+50课时进阶训练(有效期一年)",
+        money: "5000",
+        itemWidth: wx.getSystemInfoSync().windowWidth,
+      },
+      item3: {
+        id: "课程4",
+        iconUrl: "/resource/location.png",
+        title: "超感创作力训练",
+        content: "开拓思维，让写作成为快乐",
+        age: "10-18周岁",
+        time: "7天集中训练+50课时进阶训练(有效期一年)",
+        money: "5000",
+        itemWidth: wx.getSystemInfoSync().windowWidth,
+      },
+      item4: {
+        id: "课程4",
+        iconUrl: "/resource/location.png",
+        title: "超感创作力训练",
+        content: "开拓思维，让写作成为快乐",
+        age: "10-18周岁",
+        time: "7天集中训练+50课时进阶训练(有效期一年)",
+        money: "5000",
+        itemWidth: wx.getSystemInfoSync().windowWidth,
       },
     }
   },

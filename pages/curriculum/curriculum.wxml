@@ -3,6 +3,8 @@
 
 <view class="curriculumView">
     <block wx:for="{{curriculums}}" wx:key="key">
-      <template is="curriculumView" data="{{...item}}" />
+      <view class='curriculumItemView'>
+        <template is="curriculumView" data="{{...item}}" />
+      </view>
     </block>
 </view>

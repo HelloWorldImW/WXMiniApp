@@ -46,29 +46,29 @@
     <view style='display:flex;align-items:center;'>
       <!--左边方块  -->
       <view style='background-color:purple;width:120px;height:100px;margin-left:10px;margin-top:10px;display:flex;flex-direction:column;justify-content:space-around;align-items:center;'>
-        <image src='/resource/location.png' style='width:20px;height:20px;'></image>
-        <text style='font-size:14px;color:white;'>超感创作力训练</text>
-        <text style='font-size:8px;color:white;'>开拓思维，让写作成为快乐</text>
+        <image src='{{iconUrl}}' style='width:20px;height:20px;'></image>
+        <text style='font-size:14px;color:white;'>{{title}}</text>
+        <text style='font-size:8px;color:white;'>{{content}}</text>
       </view> 
       <!--右边条件  -->
-      <view style='background-color:whitesmoke;width:280px;height:80px;margin-top:10px;margin-left:-2px;display:flex;flex-direction:column;justify-content:center;'>
+      <view style='background-color:whitesmoke;width:{{itemWidth-155}}px;height:80px;margin-top:10px;margin-left:-2px;display:flex;flex-direction:column;justify-content:center;border-radius:2px'>
         <!--适合年龄  -->
         <view style='display:flex;margin-bottom:5px;'>
           <text style='background-color:purple;color:white;font-size:8px;border-radius:4px;width:40px;text-align:center;margin-left:8px;'>适合年龄</text>
-          <text style='color:gray;font-size:8px;margin-left:5px;'>10-18周岁</text>
+          <text style='color:gray;font-size:8px;margin-left:5px;'>{{age}}</text>
         </view>
         <!--训练课时  -->
         <view style='display:flex;margin-top:5px;'>
           <text style='background-color:purple;color:white;font-size:8px;border-radius:4px;width:40px;text-align:center;margin-left:8px;'>训练课时</text>
-          <text style='color:gray;font-size:8px;margin-left:5px;'>7天集中训练+50课时进阶训练(有效期一年)</text>
+          <text style='color:gray;font-size:8px;margin-left:5px;'>{{time}}</text>
         </view>
       </view> 
     </view>
 
     <!--标价栏  -->
-    <view style='margin-left:10px;margin-top:10px;width:375px;height:50px;display:flex;flex-direction:row;justify-content:space-between;'>
-      <text style='font-size:17px;'>超感创作力训练</text>
-      <text style='font-size:17px;'>￥5000</text>
+    <view style='margin-left:10px;margin-top:10px;width:{{itemWidth-40}}px;height:50px;display:flex;flex-direction:row;justify-content:space-between;'>
+      <text style='font-size:17px;'>{{title}}</text>
+      <text style='font-size:17px;'>￥{{money}}</text>
     </view>
   </view>
 </template>
