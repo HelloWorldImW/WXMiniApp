@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/curriculum/curriculum",
     "pages/aboutUs/aboutUs",
+    "pages/curriculum/curriculum",
     "pages/news/news",
     "pages/subscribe/subscribe",
     "pages/common/common"
@@ -23,7 +23,7 @@
       },
       {
         "pagePath": "pages/news/news",
-        "text": "咨询"
+        "text": "资讯"
       },
       {
         "pagePath": "pages/subscribe/subscribe",

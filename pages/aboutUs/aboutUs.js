@@ -8,10 +8,7 @@ Page({
     imageWidth: wx.getSystemInfoSync().windowWidth,
     topScroll: {
       // 顶部滚动栏
-      imgUrls: [
-        { imgUrl: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'},
-        { imgUrl: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'}
-      ],
+      imgUrls: [],
       indicatorDots: true,
       autoplay: true,
       interval: 2000,
@@ -26,28 +23,9 @@ Page({
       moreText: "",
     },
     // 模板
-    moduls:{
-      school: {
-        id: "1",
-        title: "学校",
-        icon: "/resource/location.png"
-      },
-      school1: {
-        id: "2",
-        title: "学校1",
-        icon: "/resource/location.png"
-      },
-      school2: {
-        id: "3",
-        title: "学校2",
-        icon: "/resource/location.png"
-      }, 
-    },
+    moduls:{},
     /// 最新公告
-    news: {
-      icon:"/resource/location.png",
-      title:"Hello World"
-    },
+    news: {},
     /// 推荐课程
     recommonLession: {
       title: {
@@ -209,62 +187,8 @@ Page({
     console.log(e.currentTarget.id)
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
   // 打开地图
-  openMap: function() {
+  openMap: function () {
     wx.getLocation({
       type: 'gcj02',
       success: function (res) {
@@ -277,5 +201,87 @@ Page({
         })
       }
     })
-  }
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    this.getBanner()
+    this.getNav()
+    this.getNewNotice()
+  },
+
+  // 获取最新公告
+  getNewNotice: function () {
+    var url = this.getUrl("notice")
+    var that = this
+    this.openUrl(url, function (data) {
+      var dic = {
+        icon: data["head_pic"],
+        title: data["title"],
+        content: data["content"]
+      }
+      that.setData({
+          news: dic,
+        })
+    })
+  },
+  // 获取导航
+  getNav: function () {
+    var url = this.getUrl("navi")
+    var that = this
+    this.openUrl(url, function (data) {
+      for (var item in data) {
+        var old = that.data.moduls
+        var dic = {
+          id: data[item]["id"],
+          title: data[item]["title"],
+          icon: data[item]["img"]
+        }
+        old[data[item]["id"]] = dic;
+        that.setData({
+          moduls: old
+        })
+      }
+    })
+  },
+
+  // 获取轮播图
+  getBanner:function() {
+    var url = this.getUrl("banner")
+    var that = this
+    this.openUrl(url, function (data) {
+      var images = [];
+      for(var item in data) {
+        var image = {imgUrl:data[item]["pic"]}
+        var old = that.data.topScroll
+        old.imgUrls = images;
+        images[item] = image
+        that.setData({
+          topScroll:old
+        })
+      }
+    })
+  },
+
+  // 打开接口
+  openUrl: function(url,completed) {
+    wx.request({
+      url: url,
+      data: {
+        'aid': '3',
+      },
+      method: "POST",
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success: function (res) {
+        completed(res.data)
+      }
+    })
+  },
+
+  getUrl: function(path) {
+    return 'https://www.qxyapp.com/index.php/Index/' + path
+  },
 })
