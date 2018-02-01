@@ -18,7 +18,7 @@ Page({
     mapLabel: {
       id:"map",
       leftIcon:"/resource/location.png",
-      title: "我爱北京天安门东大街西边",
+      title: "北京市朝阳区芍药居甲31号院",
       rightIcon:"/resource/gotoNext.png",
       moreText: "",
     },
@@ -59,24 +59,7 @@ Page({
         rightIcon: "/resource/gotoNext.png",
         moreText: "更多",
       },
-      details: {
-        item1: {
-          id: "111",
-          imageUrl:"http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
-        },
-        item2: {
-          id: "222",
-          imageUrl: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
-        },
-        item3: {
-          id: "333",
-          imageUrl: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
-        },
-        item4: {
-          id: "444",
-          imageUrl: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
-        },
-      }
+      details: {}
     }
   },
   
@@ -135,17 +118,11 @@ Page({
 
   // 打开地图
   openMap: function () {
-    wx.getLocation({
-      type: 'gcj02',
-      success: function (res) {
-        var latitude = res.latitude
-        var longitude = res.longitude
-        wx.openLocation({
-          latitude: latitude,
-          longitude: longitude,
-          scale: 28
-        })
-      }
+    wx.openLocation({
+      latitude: 39.9833500000,
+      longitude: 116.4375700000,
+      name: this.data.mapLabel.title,
+      scale: 28
     })
   },
   /**
@@ -167,7 +144,6 @@ Page({
     this.openUrl(url, function (data) {
       var items = {};
       for (var item in data) {
-        console.log(data[item])
         var old = that.data.studentShows
         var dic = {
           id: data[item]["id"],
