@@ -35,36 +35,7 @@ Page({
         rightIcon: "/resource/gotoNext.png",
         moreText: "更多",
       },
-      details: {
-        item1: {
-          id: "id1",
-          bgImage: "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg",
-          width: (wx.getSystemInfoSync().windowWidth-30)/2.0,
-          height: 100,
-          title: "数学",
-        },
-        item2: {
-          id: "id2",
-          bgImage: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
-          width: (wx.getSystemInfoSync().windowWidth - 30) / 2.0,
-          height: 100,
-          title: "地理",
-        },
-        item3: {
-          id: "id3",
-          bgImage: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
-          width: (wx.getSystemInfoSync().windowWidth - 30) / 2.0,
-          height: 100,
-          title: "自然",
-        },
-        item4: {
-          id: "id4",
-          bgImage: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
-          width: (wx.getSystemInfoSync().windowWidth - 30) / 2.0,
-          height: 100,
-          title: "语文",
-        }, 
-      }
+      details: {}
     },
 
     /// 师资力量
@@ -76,32 +47,7 @@ Page({
         rightIcon: "/resource/gotoNext.png",
         moreText: "更多",
       },
-      details: {
-        item1: {
-          id: "张山",
-          userImage:"http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
-          name: "张山",
-          title: "教授",
-        },
-        item2: {
-          id: "张大山",
-          userImage: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
-          name: "张大山",
-          title: "学者",
-        },
-        item3: {
-          id: "王小三",
-          userImage: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
-          name: "王小三",
-          title: "副教授",
-        },
-        item4: {
-          id: "李大山",
-          userImage: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
-          name: "李大山",
-          title: "专家",
-        },
-      }
+      details: {}
     },
 
     /// 学员风采
@@ -209,6 +155,78 @@ Page({
     this.getBanner()
     this.getNav()
     this.getNewNotice()
+    this.getClasses()
+    this.getTeachers()
+    this.getStudentShows()
+  },
+  
+  // 获取学员风采
+  getStudentShows: function () {
+    var url = this.getUrl("getfengcai")
+    var that = this
+    this.openUrl(url, function (data) {
+      var items = {};
+      for (var item in data) {
+        console.log(data[item])
+        var old = that.data.studentShows
+        var dic = {
+          id: data[item]["id"],
+          imageUrl: data[item]["pic"],
+        }
+        items[item] = dic
+      }
+      old.details = items
+      that.setData({
+        studentShows:old
+      })
+    })
+  },
+
+  // 获取师资力量
+  getTeachers: function () {
+    var url = this.getUrl("getteacher")
+    var that = this
+    this.openUrl(url, function (data) {
+      var items = {};
+      for (var item in data) {
+        var old = that.data.teachers
+        var dic = {
+          id: data[item]["id"],
+          userImage: data[item]["img"],
+          name: data[item]["name"],
+          title: data[item]["level"],
+        }
+        items[item] = dic
+      }
+      old.details = items
+      that.setData({
+        teachers: old
+      })
+    })
+  },
+
+  // 获取推荐课程
+  getClasses: function () {
+    var url = this.getUrl("getclass")
+    var that = this
+    this.openUrl(url, function (data) {
+      var items = {};
+      for (var item in data) {
+        var old = that.data.recommonLession
+        var dic = {
+          id: data[item]["id"],
+          bgImage: data[item]["img1"],
+          width: (wx.getSystemInfoSync().windowWidth - 30) / 2.0,
+          height: 100,
+          title: data[item]["name"],
+        }
+        items[item] = dic
+      }
+      old.details = items
+      that.setData({
+        recommonLession: old
+      })
+    })
   },
 
   // 获取最新公告
@@ -239,10 +257,10 @@ Page({
           icon: data[item]["img"]
         }
         old[data[item]["id"]] = dic;
-        that.setData({
-          moduls: old
-        })
       }
+      that.setData({
+        moduls: old
+      })
     })
   },
 
@@ -252,15 +270,15 @@ Page({
     var that = this
     this.openUrl(url, function (data) {
       var images = [];
+      var old = that.data.topScroll
       for(var item in data) {
         var image = {imgUrl:data[item]["pic"]}
-        var old = that.data.topScroll
-        old.imgUrls = images;
         images[item] = image
-        that.setData({
-          topScroll:old
-        })
       }
+      old.imgUrls = images;
+      that.setData({
+        topScroll: old
+      })
     })
   },
 
