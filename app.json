@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/subscribe/subscribe",
     "pages/aboutUs/aboutUs",
     "pages/curriculum/curriculum",
     "pages/news/news",
-    "pages/subscribe/subscribe",
     "pages/common/common"
   ],
   "window": {
