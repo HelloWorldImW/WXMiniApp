@@ -94,7 +94,7 @@ Page({
       })
       return
     } else {
-      console.log("Hello")
+      this.submitInfo()
     }
   },
 
@@ -125,6 +125,37 @@ Page({
         showdata:items,
         classId: data[0]["id"]
       })
+    })
+  },
+
+  submitInfo: function(info) {
+    var url = this.getUrl("addorder")
+    wx.request({
+      url: url,
+      data: {
+        'aid': '3',
+        'uid': '3',
+        'cid': this.data.classId,
+        'name': this.data.subName,
+        'tel': this.data.telNum,
+        'content': this.data.remarkDetail,
+      },
+      method: "POST",
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success: function (res) {
+        if(res.data=="1") {
+          wx.showToast({
+            title: '报名成功',
+          })
+        } else if (res.data == "2") {
+          wx.showToast({
+            title: '请勿重复报名',
+            icon:"none",
+          })
+        }
+      }
     })
   },
 
