@@ -45,7 +45,7 @@
     <!--上方展示栏  -->
     <view style='display:flex;align-items:center;'>
       <!--左边方块  -->
-      <view style='background-image:url("/resource/class_bg.png");background-size:100% 100%;width:120px;height:100px;margin-left:10px;margin-top:10px;display:flex;flex-direction:column;justify-content:space-around;align-items:center;'>
+      <view style='background-image:url("https://gss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/aa64034f78f0f7365f2d85ce0155b319eac4132a.jpg");background-size:100% 100%;width:120px;height:100px;margin-left:10px;margin-top:10px;display:flex;flex-direction:column;justify-content:space-around;align-items:center;'>
         <image src='{{iconUrl}}' style='width:20px;height:20px;'></image>
         <text style='font-size:14px;color:white;'>{{title}}</text>
         <text style='font-size:8px;color:white;'>{{content}}</text>
