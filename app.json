@@ -15,19 +15,27 @@
     "list": [
       {
         "pagePath": "pages/aboutUs/aboutUs",
-        "text": "关于我们"
+        "text": "关于我们",
+        "iconPath":"/resource/aboutUS.png",
+        "selectedIconPath":"/resource/aboutUS_light.png"
       },
       {
         "pagePath": "pages/curriculum/curriculum",
-        "text": "课程"
+        "text": "课程",
+        "iconPath": "/resource/class.png",
+        "selectedIconPath": "/resource/class_light.png"
       },
       {
         "pagePath": "pages/news/news",
-        "text": "资讯"
+        "text": "资讯",
+        "iconPath": "/resource/news.png",
+        "selectedIconPath": "/resource/news_light.png"
       },
       {
         "pagePath": "pages/subscribe/subscribe",
-        "text": "预约"
+        "text": "预约",
+        "iconPath": "/resource/subscribe.png",
+        "selectedIconPath": "/resource/subscribe_light.png"
       }
     ]
   }
