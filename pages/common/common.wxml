@@ -45,13 +45,14 @@
     <!--上方展示栏  -->
     <view style='display:flex;align-items:center;'>
       <!--左边方块  -->
-      <view style='background-color:purple;width:120px;height:100px;margin-left:10px;margin-top:10px;display:flex;flex-direction:column;justify-content:space-around;align-items:center;'>
+      <view style='background-image:url("/resource/class_bg.png");background-size:100% 100%;width:120px;height:100px;margin-left:10px;margin-top:10px;display:flex;flex-direction:column;justify-content:space-around;align-items:center;'>
         <image src='{{iconUrl}}' style='width:20px;height:20px;'></image>
         <text style='font-size:14px;color:white;'>{{title}}</text>
         <text style='font-size:8px;color:white;'>{{content}}</text>
       </view> 
+      
       <!--右边条件  -->
-      <view style='background-color:whitesmoke;width:{{itemWidth-155}}px;height:80px;margin-top:10px;margin-left:-2px;display:flex;flex-direction:column;justify-content:center;border-radius:2px'>
+      <view style='background-color:whitesmoke;width:{{itemWidth-155}}px;height:80px;margin-top:10px;margin-left:-4px;display:flex;flex-direction:column;justify-content:center;border-radius:2px'>
         <!--适合年龄  -->
         <view style='display:flex;margin-bottom:5px;'>
           <text style='background-color:purple;color:white;font-size:8px;border-radius:4px;width:40px;text-align:center;margin-left:8px;'>适合年龄</text>
