@@ -2,9 +2,16 @@
   "pages": [
     "pages/aboutUs/aboutUs",
     "pages/curriculum/curriculum",
+    "pages/aboutUs/curriculum/curriculum",
     "pages/news/news",
     "pages/subscribe/subscribe",
-    "pages/common/common"
+    "pages/common/common",
+    "pages/details/studentShows/studentShows",
+    "pages/details/schoolInfo/schoolInfo",
+    "pages/details/news/allNews",
+    "pages/details/newActivity/newActivity",
+    "pages/details/classInfo/classInfo",
+    "pages/details/teacherInfo/teacherInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -16,8 +23,8 @@
       {
         "pagePath": "pages/aboutUs/aboutUs",
         "text": "关于我们",
-        "iconPath":"/resource/aboutUS.png",
-        "selectedIconPath":"/resource/aboutUS_light.png"
+        "iconPath": "/resource/aboutUS.png",
+        "selectedIconPath": "/resource/aboutUS_light.png"
       },
       {
         "pagePath": "pages/curriculum/curriculum",

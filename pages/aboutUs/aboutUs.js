@@ -41,7 +41,7 @@ Page({
     /// 师资力量
     teachers: {
       title: {
-        id: "recommonSession",
+        id: "teachers",
         leftIcon: "/resource/location.png",
         title: "师资力量",
         rightIcon: "/resource/gotoNext.png",
@@ -53,7 +53,7 @@ Page({
     /// 学员风采
     studentShows: {
       title: {
-        id: "recommonSession",
+        id: "studentShows",
         leftIcon: "/resource/location.png",
         title: "学员风采",
         rightIcon: "/resource/gotoNext.png",
@@ -68,9 +68,13 @@ Page({
     if (e.currentTarget.id == "map") {
       this.openMap()
     } else if (e.currentTarget.id == "recommonSession") {
-      console.log("recommonSession")
-    } else if (e.currentTarget.id == "3") {
+      wx.navigateTo({
+        url: 'curriculum/curriculum?id = 2'
+      })
+    } else if (e.currentTarget.id == "teachers") {
       console.log("3")
+    } else if (e.currentTarget.id = "studentShows") {
+      console.log("4")
     }
   },
 
@@ -79,7 +83,9 @@ Page({
     if (e.currentTarget.id == "1") {
       console.log("1")
     } else if (e.currentTarget.id == "2") {
-      console.log("2")
+      wx.navigateTo({
+        url: 'curriculum/curriculum'
+      })
     } else if (e.currentTarget.id == "3") {
       console.log("3")
     }
@@ -103,7 +109,9 @@ Page({
 
   // 点击咨询按钮
   clickSuspendButton: function(e) {
-    console.log("点击了咨询按钮")
+    wx.makePhoneCall({
+      phoneNumber: '1340000' //仅为示例，并非真实的电话号码
+    })
   },
 
   //点击师资力量 
