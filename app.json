@@ -6,12 +6,13 @@
     "pages/news/news",
     "pages/subscribe/subscribe",
     "pages/common/common",
-    "pages/details/studentShows/studentShows",
     "pages/details/schoolInfo/schoolInfo",
     "pages/details/news/allNews",
     "pages/details/newActivity/newActivity",
     "pages/details/classInfo/classInfo",
-    "pages/details/teacherInfo/teacherInfo"
+    "pages/details/teacherInfo/teacherInfo",
+    "pages/details/allTeachers/allTeachers",
+    "pages/details/allStudentShows/allStudentShows"
   ],
   "window": {
     "backgroundTextStyle": "light",

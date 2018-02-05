@@ -72,23 +72,29 @@ Page({
         url: 'curriculum/curriculum?id = 2'
       })
     } else if (e.currentTarget.id == "teachers") {
-      console.log("3")
+      wx.navigateTo({
+        url: '../details/allTeachers/allTeachers'
+      })
     } else if (e.currentTarget.id = "studentShows") {
-      console.log("4")
+      wx.navigateTo({
+        url: '../details/allStudentShows/allStudentShows'
+      })
     }
   },
 
   // 点击模板
   clickModuleView: function (e) {
+    var url = ""
     if (e.currentTarget.id == "1") {
-      console.log("1")
+      url = '../details/schoolInfo/schoolInfo'
     } else if (e.currentTarget.id == "2") {
-      wx.navigateTo({
-        url: 'curriculum/curriculum'
-      })
+      url = 'curriculum/curriculum'
     } else if (e.currentTarget.id == "3") {
-      console.log("3")
+      url = '../details/allStudentShows/allStudentShows'
     }
+    wx.navigateTo({
+      url: url
+    })
   },
 
   // 点击滚动图片
@@ -99,12 +105,16 @@ Page({
   
   // 点击最新公告
   clickNews: function(e) {
-    console.log("点击最新公告")
+    wx.navigateTo({
+      url: '../details/newActivity/newActivity'
+    })
   },
 
   // 点击推荐课程详情
   clickRecommendCurriculumView: function(e) {
-    console.log(e.currentTarget.id)
+    wx.navigateTo({
+      url: '../details/classInfo/classInfo'
+    })
   },
 
   // 点击咨询按钮
@@ -116,12 +126,14 @@ Page({
 
   //点击师资力量 
   clickTeachersView: function(e) {
-    console.log(e.currentTarget.id)
+    wx.navigateTo({
+      url: '../details/teacherInfo/teacherInfo'
+    })
   },
 
   // 点击学员风采
   clickStuendtShows: function(e) {
-    console.log(e.currentTarget.id)
+   
   },
 
   // 打开地图
