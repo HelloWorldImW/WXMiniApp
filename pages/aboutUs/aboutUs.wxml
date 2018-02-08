@@ -66,4 +66,6 @@
 </scroll-view>
 
 <!--咨询按钮  -->
-<button class='suspendButton' catchtap='clickSuspendButton'></button>
+<view catchtap='clickSuspendButton'>
+  <image class='suspendButton' src='/resource/suspend.png'></image>
+</view>

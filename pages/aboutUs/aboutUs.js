@@ -250,7 +250,8 @@ Page({
         var dic = {
           id: data[item]["id"],
           title: data[item]["title"],
-          icon: data[item]["img"]
+          // icon: data[item]["img"]
+          icon: "/resource/item" + data[item]["id"]+".png"
         }
         old[data[item]["id"]] = dic;
       }
