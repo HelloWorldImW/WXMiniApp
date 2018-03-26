@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/aboutUs/aboutUs",
+    "pages/curriculum/curriculum",
+    "pages/aboutUs/curriculum/curriculum",
+    "pages/news/news",
+    "pages/subscribe/subscribe",
+    "pages/common/common",
+    "pages/details/schoolInfo/schoolInfo",
+    "pages/details/news/allNews",
+    "pages/details/newActivity/newActivity",
+    "pages/details/classInfo/classInfo",
+    "pages/details/teacherInfo/teacherInfo",
+    "pages/details/allTeachers/allTeachers",
+    "pages/details/allStudentShows/allStudentShows",
+    "pages/details/appointment/appointment"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1b82fb",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/aboutUs/aboutUs",
+        "text": "关于我们",
+        "iconPath": "/resource/aboutUS.png",
+        "selectedIconPath": "/resource/aboutUS_light.png"
+      },
+      {
+        "pagePath": "pages/curriculum/curriculum",
+        "text": "课程",
+        "iconPath": "/resource/class.png",
+        "selectedIconPath": "/resource/class_light.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "资讯",
+        "iconPath": "/resource/news.png",
+        "selectedIconPath": "/resource/news_light.png"
+      },
+      {
+        "pagePath": "pages/subscribe/subscribe",
+        "text": "预约",
+        "iconPath": "/resource/subscribe.png",
+        "selectedIconPath": "/resource/subscribe_light.png"
+      }
+    ]
+  }
+}

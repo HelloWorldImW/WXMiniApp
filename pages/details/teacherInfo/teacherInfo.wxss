@@ -1,0 +1,32 @@
+/* pages/details/teacherInfo/teacherInfo.wxss */
+.headView{
+    display: flex;
+    flex-direction: row;
+    height: 120px;
+    width: 100%;
+}
+.headImageView {
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius:50px;
+    height: 100px;
+    width: 100px;
+}
+.headNameView {
+     margin-top: 10px;
+    margin-left: 10px;
+}
+.littleView{
+    height: 10px;
+    width: 100%;
+    background-color: whitesmoke
+}
+.introduce {
+    height: 20px;
+    width: 100%;
+    padding: 10px;
+}
+.content {
+    width: 100%;
+    padding: 10px;
+}

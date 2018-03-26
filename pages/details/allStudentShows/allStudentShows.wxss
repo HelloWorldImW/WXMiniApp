@@ -1,0 +1,17 @@
+/* pages/details/allStudentShows/allStudentShows.wxss */
+.contain {
+    width: 100%;
+    height: 100vh;
+}
+.scroll {
+    display: flex;
+    justify-content: center;
+    align-content: center
+}
+.cell {
+    height: 200px;
+    padding: 5px 10px 5px 10px;
+}
+page {
+  background-color: whitesmoke;
+}

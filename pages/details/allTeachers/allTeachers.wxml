@@ -1,0 +1,13 @@
+<!--pages/details/allTeachers/allTeachers.wxml-->
+<import src="/pages/common/common.wxml"/>
+<view style='margin-bottom:10px;'>
+    <scroll-view style='width:100%;'>
+        <block wx:for="{{teachers.details}}" wx:key="key">
+            <view style='margin-bottom:2px;background-color:white;'>
+                <template is="teachersView" data="{{...item}}"/>
+            </view>
+        </block>
+    </scroll-view>
+    
+  </view>
+<!-- <text>pages/details/allTeachers/allTeachers.wxml</text> -->

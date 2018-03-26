@@ -1,0 +1,10 @@
+<!--pages/curriculum/curriculum.wxml-->
+<import src="/pages/common/common.wxml"/>
+
+<view class="curriculumView">
+    <block wx:for="{{curriculums}}" wx:key="key">
+      <view class='curriculumItemView'>
+        <template is="curriculumView" data="{{...item}}" />
+      </view>
+    </block>
+</view>

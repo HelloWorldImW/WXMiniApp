@@ -1,0 +1,13 @@
+<!--pages/news/news.wxml-->
+<scroll-view scroll-y enable-back-to-top="true"  class='contain'>
+    <block wx:for="{{data}}" wx:key="key">
+      <view class='cell' style='width:{{winddowWidth-20}}px'>
+        <image class='imageView' src='{{item.head_pic}}'/>
+        <view class='contentView' style='width:{{winddowWidth-100}}px'>
+            <view class='title' >{{item.title}}</view>
+            <view class='time' >{{item.newTime}}</view>
+            <view class='realContent' >{{item.content}} </view>
+        </view>
+      </view>
+    </block>
+</scroll-view>

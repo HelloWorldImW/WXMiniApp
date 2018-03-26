@@ -1,0 +1,72 @@
+<!--pages/aboutUs/aboutUs.wxml-->
+<import src="/pages/common/common.wxml"/>
+<scroll-view scroll-y enable-back-to-top="true" style="height: {{windowHeight}}px;">
+  <!--顶部滚动栏  -->
+  <swiper indicator-dots="{{topScroll.indicatorDots}}"
+    autoplay="{{topScroll.autoplay}}" interval="{{topScroll.interval}}" duration="{{topScroll.duration}}">
+    <block wx:for="{{topScroll.imgUrls}}" wx:key= "imgKey">
+      <swiper-item>
+        <view data-index="{{index}}" catchtap='clickImage'>
+          <image src="{{item.imgUrl}}" model="aspectFit" style= "width: {{imageWidth}}px;"/>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!--地图显示栏  -->
+  <template is="titleView" data="{{...mapLabel}}" />
+
+  <!--学校、课程、学员风采  -->
+  <view class="modulsView">
+    <block wx:for="{{moduls}}" wx:key="key">
+      <template is="moduleView" data="{{...item}}" />
+    </block>
+  </view>
+
+  <!--最新公告  -->
+  <view class='news' catchtap='clickNews'>
+    <image src='{{news.icon}}' class='news-image'></image>
+    <view class='vertical-line'></view>
+    <text class='news-title'>{{news.title}}</text>
+  </view>
+
+  <!--推荐课程  -->
+  <view style='margin-bottom:4px'>
+    <template is="titleView" data="{{...recommonLession.title}}" />
+  </view>
+  <view class='recommendCurriculumView'>
+    <block wx:for="{{recommonLession.details}}" wx:key="key">
+      <template is="recommendCurriculumView" data="{{...item}}"/>
+    </block>
+  </view>
+
+  <!--师资力量  -->
+  <view style='margin-bottom:4px'>
+    <template is="titleView" data="{{...teachers.title}}" />
+  </view>
+  <view style='margin-bottom:10px;'>
+    <block wx:for="{{teachers.details}}" wx:key="key">
+    <view style='margin-bottom:2px;background-color:white;'>
+      <template is="teachersView" data="{{...item}}"/>
+    </view>
+    </block>
+  </view>
+
+  <!--学员风采  -->
+  <view style='margin-bottom:4px'>
+    <template is="titleView" data="{{...studentShows.title}}" />
+  </view>
+  <block wx:for="{{studentShows.details}}" wx:key="key">
+    <view id="{{index}}" style='display:flex;padding-left:10px;padding-right:10px;padding-top:10px;background-color:white;' catchtap='clickStuendtShows'>
+    <image src='{{item.imageUrl}}' style='width:{{imageWidth}}px;height:160px'></image>
+    </view>
+  </block>
+
+
+</scroll-view>
+
+<!--咨询按钮  -->
+ <view catchtap='clickSuspendButton'>
+  <image class='suspendButton' src='/resource/suspend.png'></image>
+</view> 
+ <showImageView  wx:if="{{show}}" bindtap='onHideImage' imageArray='{{imageArray}}' current = "{{current}}"/>

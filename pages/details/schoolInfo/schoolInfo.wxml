@@ -1,0 +1,26 @@
+<!--pages/details/schoolInfo/schoolInfo.wxml-->
+<import src="/pages/common/common.wxml"/>
+<view class='contain'> 
+    <scroll-view scroll-y enable-back-to-top="true" class='contain'>
+        <view class='topView'>
+            <view>{{"姓名："+ name}}</view>
+            <view>{{"电话："+ tel}}</view>
+            <view>{{"地址："+ address}}</view>
+            <!-- <image class='topImage' src = "{{'http://pic26.nipic.com/20121208/2625614_105405983000_2.jpg'}}"/> -->
+        </view>
+        <view class='navigationButton'>
+            <block wx:for="{{navigationButtonArray}}" wx:key="key">
+                <view id = "{{item.id}}" class='navigationItem' bindtap='onItemButtonClick'>{{item.text}}                </view>
+            </block>
+        </view>
+        <view class='slide' style='margin-left:{{marginLeft}}px'/>  
+        <view wx:if="{{showViewNum == 1}}" class='informationView'> {{introduce}} </view>
+        <view wx:elif="{{showViewNum == 2}}" class='prizeView'> 
+            <block wx:for="{{imageArray}}" wx:key="key">
+            <image src = "{{item.imageUrl}}" class='prizeImageView 'style='width:{{(screenWidth-20)/2}}px' bindtap='onImageClick' id = "{{index}}"/>
+            </block>        
+        </view>
+        <view wx:else class='informationView'> {{power}} </view> 
+    </scroll-view>
+    <showImageView wx:if="{{show}}" bindtap='onHideImage' imageArray='{{imageArray}}' current = "{{current}}"/>
+</view>

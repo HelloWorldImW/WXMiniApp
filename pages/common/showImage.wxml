@@ -1,0 +1,9 @@
+ <view class='showImageView' >
+    <swiper class='fullView' current='{{current}}'>
+        <block wx:for="{{imageArray}}" wx:key= "{{key}}">
+            <swiper-item>
+                <image class='fullView' src='{{item.imageUrl}}' mode = 'aspectFit' />
+            </swiper-item>
+        </block>
+    </swiper>
+</view>

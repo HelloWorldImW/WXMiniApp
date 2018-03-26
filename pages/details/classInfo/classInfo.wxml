@@ -1,0 +1,42 @@
+<!--pages/details/classInfo/classInfo.wxml-->
+<scroll-view scroll-y enable-back-to-top="true" style='margin-bottom:50px'>
+    <view class='headerView'>
+        <view class='headerImageView' style='background-image:url("https://gss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/aa64034f78f0f7365f2d85ce0155b319eac4132a.jpg");'>
+            <image class='littleImage' src='{{classInfo.img1}}'/>
+            <view class='littleClassName'>{{classInfo.name}}</view>
+            <view class='littleOrdernum'>{{classInfo.ordernum}}</view>
+        </view>
+        <view class='headerContentView'>
+            <view class='containContentView'>
+                <view class='itemView'>
+                    <view class='itemHeadView'>适合年龄</view>
+                    <view class='itemContentView'>所有</view>
+                </view>
+                <view class='itemView' style='margin-top:10px'>
+                    <view class='itemHeadView'>训练课时</view>
+                    <view class='itemContentView'>根据个人情况规定</view>
+                </view>
+            </view>
+        </view>
+        <view class='joinNum'>{{classInfo.ordernum+"位同学已学"}}</view>
+    </view>
+    <view class='titleView'>{{classInfo.name}}</view>
+    <view class='priceView'>
+        <view class='nowPriceView'>{{"￥"+classInfo.price}}</view>
+        <view class='prePriceView'>{{"￥"+classInfo.pre_price}}</view>
+    </view>
+    <view class='divorceLine'/>
+    <view class='divorceLine' style='height:15px;margin-top:20px'/>
+    <view class='contentTitle'>
+        <view class='littleblue'/>
+        <view class='contentTitleText'>课程介绍</view>
+    </view>
+    <view class='divorceLine'/>
+    <view class='classIntruduceView'>
+        <view wx:if = "{{classInfo.tese}}" class='itemHeadView'>课程特色</view>
+        <view wx:if = "{{classInfo.tese}}" class='featureView'>{{classInfo.tese}}</view>
+         <view wx:if = "{{classInfo.tedian}}" class='itemHeadView'>课程特点</view>
+        <view wx:if = "{{classInfo.tedian}}" class='featureView'>{{classInfo.tedian}}</view>
+    </view>
+</scroll-view>
+<view class='joinButton' catchtap='onJoinin'>立即报名</view>

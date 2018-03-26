@@ -1,0 +1,60 @@
+/* pages/details/schoolInfo/schoolInfo.wxss */
+.contain {
+    height: 100vh;
+    width: 100%;
+}
+.topView {
+    height: 200px;
+    width: 100%;
+    padding-left: 20px;
+}
+.topImage {
+    width: 100%;
+    height: 100%;
+}
+.navigationButton {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row ;
+    width: 100%;
+    height: 40px;
+}
+.slide {
+    background-color: #1b82fb;
+    width: 33%;
+    height: 2px;
+}
+.navigationItem {
+    display: flex;
+    flex: 1;
+    justify-content:center;
+    align-items:center
+}
+.content {
+  width: 100%;  
+}
+.informationView {
+    padding: 10px;
+    word-wrap: break-word;
+}
+.prizeView {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.prizeImageView {
+    height: 200px;
+}
+.view3 {
+    
+    word-wrap: break-word;
+}
+.showImageView {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+}

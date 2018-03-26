@@ -1,0 +1,9 @@
+<!--pages/details/allStudentShows/allStudentShows.wxml-->
+<view class='contain'>
+    <scroll-view class='scroll'>
+        <block wx:for="{{imageArray}}" wx:key="key">
+            <image src='{{item.imageUrl}}' class='cell contain' mode="aspectFill" style='width:{{windowWidth-20}}px' bindtap='onShowImage' id = "{{item.id}}"/> 
+        </block>
+    </scroll-view>
+    <showImageView wx:if="{{show}}" bindtap='onHideImage' imageArray='{{imageArray}}' current = "{{current}}"/>
+</view>

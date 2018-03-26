@@ -1,0 +1,22 @@
+/* pages/subscribe/subscribe.wxss */
+
+.items {
+  display:flex;
+  margin-top: 2px;
+  align-items: center;
+  justify-content:center;
+  border-bottom:1px whitesmoke solid;
+}
+
+.items2 {
+  display:flex;
+  margin-top: 2px;
+  align-items: center;
+  justify-content:center;
+}
+
+.input {
+  border-bottom:1px whitesmoke solid;
+  width: 200px;
+  margin-left: 20px;
+}

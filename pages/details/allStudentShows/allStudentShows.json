@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "学员风采",
+  "usingComponents": {
+    "showImageView": "../../common/showImage"
+}
+}

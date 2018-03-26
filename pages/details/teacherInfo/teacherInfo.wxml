@@ -1,0 +1,13 @@
+<!--pages/details/teacherInfo/teacherInfo.wxml-->
+<!-- <text>pages/details/teacherInfo/teacherInfo.wxml</text> -->
+<scroll-view scroll-y enable-back-to-top="true">
+    <view class='headView'>
+        <image class='headImageView' src='{{teachInfo.img}}' />
+        <view class='headNameView'>
+            {{teachInfo.name+'  '+teachInfo.level}}
+        </view>
+    </view>
+    <view class='littleView'/>
+    <view class='introduce'>从教历程</view>
+    <view class='content'>{{teachInfo.experience}}</view>   
+</scroll-view>

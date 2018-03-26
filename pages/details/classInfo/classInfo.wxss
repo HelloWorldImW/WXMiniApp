@@ -1,0 +1,161 @@
+/* pages/details/classInfo/classInfo.wxss */
+.headerView {
+    padding-left: 10px;
+    margin-top: 10px;
+    height: 200px;
+    width: 100%;
+    /* background-color: red;  */
+    display: flex;
+    flex-direction: row;
+}
+.headerImageView {
+    width: 120px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size:100% 100%;
+
+}
+headerImageViewContain {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: 180px;
+    /* background-color: blue */
+}
+.littleImage {
+    width: 80px;
+    height: 80px;
+}
+.littleClassName {
+    height: 30px;
+    
+} 
+.littleOrdernum {
+    height: 20;
+    font-size: 13;
+}
+.headerContentView {
+    padding-right: 20px;
+    margin-top: 15px;
+    margin-left: -6px;
+    flex: 1;
+    height: 150px;
+    /* background-color: green; */
+    display: flex;
+}
+.containContentView {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    border-width: 1px;
+    border-style: solid;
+    border-color: gainsboro;
+    flex-direction: column;
+    border-top-right-radius:3px;
+    border-bottom-right-radius:3px;
+}
+.itemView {
+    height: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+}
+.itemHeadView {
+    margin-left: 10px;
+    background-color: purple;
+    width: 80px;
+    height: 20px;
+    border-radius:4px;
+    color: white;
+    font-size: 16px;
+    text-align: center;       
+    line-height: 20px;       
+}
+.itemContentView {
+    font-size: 16px;
+    margin-left: 10px;
+}
+.titleView {
+    margin-left: 10px;
+    font-size: 28px;
+    /* background-color: green; */
+}
+.priceView {
+    margin: 10px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+}
+.nowPriceView {
+    color: #1b82fb;
+    font-size: 28px;
+}
+.prePriceView {
+    margin-left: 10px;
+    margin-top: 8px;
+    color: gainsboro;
+    font-size: 20px;
+    text-decoration:line-through;      
+}
+.divorceLine {
+    background-color: gainsboro;
+    margin-top: 5px;
+    height: 1px;
+    width: 100%
+}
+.contentTitle {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.littleblue {
+    height: 30px;
+    width: 5px;
+    background-color: #1b82fb;
+}
+.contentTitleText {
+    margin-left: 10px;
+    font-size: 20px;
+}
+.classIntruduceView {
+     padding: 10px ; 
+}
+.featureView {
+    width: 100%;
+    padding: 10px;
+    word-wrap: break-word;
+    font-size: 16px;
+}
+.joinButton {
+    position: fixed;
+    height: 50px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    /* z-index: 999; */
+    background-color:#1b82fb;
+    color: white;
+    line-height:50px;   
+    text-align: center
+}
+.joinNum{
+    position: absolute;
+    top: 160px;
+    right: 15px;
+    bottom: 0px;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
